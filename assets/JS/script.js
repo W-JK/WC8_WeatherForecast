@@ -1,7 +1,7 @@
-var APIKey = "a02d36afb369ec740ca0a2c969837b0a" // Key created for this task only 
+ var APIKey = "a02d36afb369ec740ca0a2c969837b0a" // Key created for this task only 
  var mainQueryURL = "https://api.openweathermap.org/data/2.5/weather?"+ "q=London,London&appid=" + APIKey+ "&units=metric";  /* &exclude={part} wtaw po london to exclude data */
 // var mainQueryURL = "https://api.openweathermap.org/data/2.5/forecast?id=524901&appid="+APIKey+"&units=metric";
-// var cityName = 
+ var cityNames = ["London","Edinburgh"]
 
 
 var todayDate = moment().format('LLLL');
@@ -34,6 +34,12 @@ $.ajax({
     $(".wind").html("<div>" + "Wind Speed: " + weatherForecast.wind.speed + " KPH " + "<div>")
     
     // ------------------ current day section end -------------- // 
+
+
+
+    // ------------------- 5 day forecast sectoion ------------- //
+
+
 
 });
 
