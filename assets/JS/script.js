@@ -25,8 +25,9 @@ $.ajax({
 
 
    
-    $(".temperature").html("<h1>"+ "Temperature: " + weatherForecast.main.temp + " 'C" + "</h1>");
-    $(".humidity").html("<div>"  +  weatherForecast.main.humidity +  "</div>")
+    $(".temperature").html("<h3>"+ "Temperature: " + weatherForecast.main.temp + " 'C" + "</h3>");
+    $(".humidity").html("<div>" + "Humidity: " +  weatherForecast.main.humidity + " % " +  "</div>")
+    $(".wind").html("<div>" + "Wind Speed: " + weatherForecast.wind.speed + " KPH " + "<div>")
     
 
 
