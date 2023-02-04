@@ -21,8 +21,8 @@ $.ajax({
     $(".date").html("<span>"+ todayDate + "</span>");
     $(".city").html("<h1>"+ weatherForecast.name + "</h1>");
 
-     // $(".weather-icon").html("<svg>"+ weatherForecast.data+ "</svg>");
-     var iconID = weatherForecast.weather[0].icon;
+     // ------------- dynamic weather icon ------------------ //
+    var iconID = weatherForecast.weather[0].icon;
     // test point:  console.log(iconID) 
     iconSrc = "http://openweathermap.org/img/wn/"+ iconID +"@2x.png " //dynamic icon src
     // test point:  console.log(iconSrc) 
