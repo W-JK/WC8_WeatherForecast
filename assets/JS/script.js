@@ -16,23 +16,24 @@ $.ajax({
     console.log(mainQueryURL);
     console.log(weatherForecast);
 
-    
+    // ------------------- current day sectoion ------------- //
    
     $(".date").html("<span>"+ todayDate + "</span>");
     $(".city").html("<h1>"+ weatherForecast.name + "</h1>");
 
      // $(".weather-icon").html("<svg>"+ weatherForecast.data+ "</svg>");
-    var iconID = weatherForecast.weather[0].icon;
+     var iconID = weatherForecast.weather[0].icon;
     console.log(iconID) // test point 
-    iconSrc = "http://openweathermap.org/img/wn/"+ iconID +"@2x.png"
+    iconSrc = "http://openweathermap.org/img/wn/"+ iconID +"@2x.png " //dynamic icon src
     console.log(iconSrc) // test point
+    $("img").attr("src", iconSrc) // passing attribute of an image into html
   
     
     $(".temperature").html("<h3>"+ "Temperature: " + weatherForecast.main.temp + " 'C" + "</h3>");
     $(".humidity").html("<div>" + "Humidity: " +  weatherForecast.main.humidity + " % " +  "</div>")
     $(".wind").html("<div>" + "Wind Speed: " + weatherForecast.wind.speed + " KPH " + "<div>")
     
-
+    // ------------------ current day section end -------------- // 
 
 });
 
