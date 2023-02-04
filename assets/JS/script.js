@@ -23,9 +23,9 @@ $.ajax({
 
      // $(".weather-icon").html("<svg>"+ weatherForecast.data+ "</svg>");
      var iconID = weatherForecast.weather[0].icon;
-    console.log(iconID) // test point 
+    // test point:  console.log(iconID) 
     iconSrc = "http://openweathermap.org/img/wn/"+ iconID +"@2x.png " //dynamic icon src
-    console.log(iconSrc) // test point
+    // test point:  console.log(iconSrc) 
     $("img").attr("src", iconSrc) // passing attribute of an image into html
   
     
