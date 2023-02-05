@@ -1,14 +1,11 @@
  var APIKey = "a02d36afb369ec740ca0a2c969837b0a" // Key created for this task only 
- var mainQueryURL = "https://api.openweathermap.org/data/2.5/weather?"+ "q=London,London&appid=" + APIKey+ "&units=metric";  /* &exclude={part} wtaw po london to exclude data */
+ var mainQueryURL = "https://api.openweathermap.org/data/2.5/weather?"+ "q=London,London&appid=" + APIKey+ "&units=metric" ;  /* &exclude={part} wtaw po london to exclude data */
 
  var cityNames = ["London","Edinburgh"]
 
-var todayDate = moment().format('LLLL');
+ var todayDate = moment().format('LLLL');
 
-
-
-
-$.ajax({
+ $.ajax({
     url: mainQueryURL,    
     metod:"GET",   
     
@@ -41,28 +38,51 @@ $.ajax({
     
     // ------------------ current day section end -------------- // 
 
-    $(".sub-container").each(function(){
+    
+
+        for (let day = 1; ; day++) {          
             
+        var futureDate = moment().add(day,'d').format('LLLL') 
+        // console.log(futureDate)     
+
+        
+                if (day === 5){
+                return;
             
-        var futureDate = moment().add(1,'d').format('LLLL')
-        console.log(futureDate)
-        console.table(futureDate)
+            }
+            // $(".future-date").html("<div>"  + futureDate + "</div>") //  futureDate._d if futureDate not formated
+        };
+        
         // console.log(futureDate._d) test point if not formated 
 
-        $(".future-date").html("<div>"  + futureDate + "</div>") //  futureDate._d if futureDate not formated
-    });
+        
+    
+
+   
+ 
+   
+
+
+
+
+
+
 
       
 
-});
+}); /* ------- main query brackets */
 
 
 
+
+
+
+/*
 
     // ------------------- 5 day forecast sectoion ------------- //
 
         var citylat = weatherForecast.coord.lat ;
-        var citylon = weatherForecast.coord.lon;
+         var citylon = weatherForecast.coord.lon;
 
 
         var dailyQueryURL = "api.openweathermap.org/data/2.5/forecast?lat=" + citylat +"&lon=" + citylon + "&appid=" + APIKey + "&units=metric"; 
@@ -87,7 +107,24 @@ $.ajax({
 
     });
 
-// -------------------------------  5day forecast end
+// -------------------------------  5day forecast end */
+
+
+
+/* count $(".sub-container").each(function(){
+
+        for (let count = 1; ; count++) {          
+            
+            var futureDate = moment().add(count,'d').format('LLLL') 
+            console.log(futureDate)
+    
+            
+                    if (count === 5){
+                    return;
+                }
+                $(".future-date").html("<div>"  + futureDate + "</div>") //  futureDate._d if futureDate not formated
+            }; */
+            
 
 
 
