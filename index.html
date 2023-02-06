@@ -55,9 +55,11 @@
 
         <!-- -------------  side buttons - cities  ---------------------->
         <div class="list-group" id="history">
-           <li type="button" class="btn btn-info" data-name="city" > London </li>
-          <li type="button" class="btn btn-info" data-name="city" > Edinburgh </li>
+           <li type="button" class="btn btn-info" data-name="data-city" id="search-London"> London </li>
+          <li type="button" class="btn btn-info" data-name="data-city" id="search-Edinburgh" > Edinburgh </li>
         </div>
+
+        <button type="button" class="btn btn-danger" onclick="deleteSearchItems()"> DELETE LIST </button>
         <!-- ------------- history end -----------------        -->
 
       </aside>
@@ -94,7 +96,7 @@
         <section class="container main-container" id="forecast"  role="region" aria-live="polite">
             
           <div class="card container sub-container col mt-3  ">
-            <div class="future-date"> Future Date </div>
+            <div class="renderButtons();"> Future Date </div>
               
             <img class="daily-weather-icon" src = "http://openweathermap.org/img/wn/10d@2x.png"> </img>
               
