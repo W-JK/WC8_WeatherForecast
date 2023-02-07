@@ -1,8 +1,8 @@
  
  var APIKey = "a02d36afb369ec740ca0a2c969837b0a" // Key created for this task only 
- var cityNames = [];          // test point: ["London","Edinburgh","Szczecin"]; 
+ var cityNames = []         // test point: ["London","Edinburgh","Szczecin"]; 
  var todayDate = moment().format('LLLL');
- // test point: console.log(todayDate)
+ console.log(todayDate) // test point: 
  
 // search function  
 
