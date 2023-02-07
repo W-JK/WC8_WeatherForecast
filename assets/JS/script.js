@@ -73,7 +73,7 @@ $("#search-button").on("click",function(event){
 
     // --------------------- 5 day test section ---------------------------
    
-    
+    /* 
 
          for (let day = 1; day<5  ;day++) {                 
             
@@ -84,6 +84,9 @@ $("#search-button").on("click",function(event){
             }; 
         // console.log(futureDate._d) test point if not formated  
          
+    */ // --------------------- 5 day test section end ---------------------------
+
+     // -----------------  5 day forecast API -------------------------------------------------------------------------------------------------------------------------    
         var lat = weatherForecast.coord.lat;
         var lon = weatherForecast.coord.lon;
         var secondaryQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&exclude=hourly&appid=" + APIKey+ "&units=metric&dt&exclude=daily";
@@ -98,10 +101,10 @@ $("#search-button").on("click",function(event){
         }).then(function(weatherForecast) {
             console.log(weatherForecast);
 
-            
+           
 
-            $(".future-date1").html("<div>"+ weatherForecast.list[3].dt_txt +"</div>");//main.temp
-            var ficonID = weatherForecast.list[3].weather[0].icon;
+            $(".future-date1").html("<div>"+ weatherForecast.list[4].dt_txt +"</div>");//main.temp
+            var ficonID = weatherForecast.list[4].weather[0].icon;
             // test point:  console.log(ficonID)
             ficonSrc = "http://openweathermap.org/img/wn/"+ ficonID +"@2x.png " //dynamic icon src
              // test point:  console.log(ficonSrc)
@@ -157,40 +160,12 @@ $("#search-button").on("click",function(event){
 
         });
 
-     
-
-         
-       
-        
-       // -   5day test section ----------------------------------------------------------------------------
-
-      
-       
-      
-
-
-
-
-
-
-
+     // -----------------  5 day forecast API end ------------------------------------------------------------------------------------------------------------------------- 
 
 }); /* ------- main query brackets */
 
 
-
-
-
-
 });
-
-
-
-
-
-
-
-
 
 // --------------------- Function for displaying city buttons ----------------------------------------------
 
@@ -219,9 +194,7 @@ $("#search-button").on("click",function(event){
             location.reload();    // reload/refresh page         
         }
 
-        renderButtons(); // --------   render buttons end
-
-            
+        renderButtons(); // --------   render buttons end          
              
 
           
@@ -234,16 +207,7 @@ $("#search-button").on("click",function(event){
 
 
 
-/*
 
-function populateStorage() {
-    var mainQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=a02d36afb369ec740ca0a2c969837b0a&units=metric"
-    localStorage.setItem(London, mainQueryURL ); 
-    //var mainQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=a02d36afb369ec740ca0a2c969837b0a&units=metric"
-    //localStorage.setItem(Edinburgh, "https://api.openweathermap.org/data/2.5/weather?q=London&appid=a02d36afb369ec740ca0a2c969837b0a&units=metric"  ); 
-    
-}
-// --- test end */
 
 
 
