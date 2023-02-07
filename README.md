@@ -22,9 +22,9 @@ Code can also be accessed also on Git Hub from the below repository: https://git
 
 ![markdown screenshot "image"](./assets/Weather%20App.png)
 
-![markdown screenshot "image"](assets/Weather%20App.png)
 
-![Screenshot](Weather20App.png)
+
+![Screenshot](Weather%20App.png)
 
 
 
