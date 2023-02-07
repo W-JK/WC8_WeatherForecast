@@ -24,7 +24,7 @@ Code can also be accessed also on Git Hub from the below repository: https://git
 
 
 
-![Screenshot](Weather%20App.png)
+
 
 
 
