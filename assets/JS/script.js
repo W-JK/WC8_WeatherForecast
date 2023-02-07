@@ -114,7 +114,7 @@ $("#search-button").on("click",function(event){
              $(".daily-wind1").html("<div>" + "Wind Speed: " + weatherForecast.list[4].wind.speed + " KPH " + "<div>")
             
              
-             $(".future-date2").html("<div>"+ weatherForecast.list[11].dt_txt +"</div>");//main.temp
+             $(".future-date2").html("<div>"+ weatherForecast.list[12].dt_txt +"</div>");//main.temp
             var ficonID = weatherForecast.list[12].weather[0].icon;
             // test point:  console.log(ficonID)
             ficonSrc = "http://openweathermap.org/img/wn/"+ ficonID +"@2x.png " //dynamic icon src
