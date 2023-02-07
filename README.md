@@ -20,9 +20,9 @@ This project is available under below link:  https://w-jk.github.io/WC8_WeatherF
 
 Code can also be accessed also on Git Hub from the below repository: https://github.com/W-JK/WC8_WeatherForecast.git
 
+![markdown screenshot "image"](./assets/Weather%20App.png)
 
-
-
+![markdown screenshot "image"](assets/Weather%20App.png)
 
 
 
