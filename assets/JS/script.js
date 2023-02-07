@@ -1,9 +1,10 @@
  
  var APIKey = "a02d36afb369ec740ca0a2c969837b0a" // Key created for this task only 
- var cityNames = ["London","Edinburgh"]
+ var cityNames = [];          // test point: ["London","Edinburgh","Szczecin"]; 
  var todayDate = moment().format('LLLL');
+ // test point: console.log(todayDate)
  
- 
+// search function  
 
 $("#search-button").on("click",function(event){
      event.preventDefault();
@@ -15,7 +16,7 @@ $("#search-button").on("click",function(event){
         alert("Please type city name")
         var cityURL= "London"
     
-        var mainQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+ cityURL + "&appid=" + APIKey+ "&units=metric" ;  /* &exclude={part} wtaw po london to exclude data */
+        var mainQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+ cityURL + "&appid=" + APIKey+ "&units=metric" ;  
      
     }
     
@@ -71,22 +72,9 @@ $("#search-button").on("click",function(event){
     
     // ------------------ current day section end -------------- // 
 
-    // --------------------- 5 day test section ---------------------------
    
-    /* 
 
-         for (let day = 1; day<5  ;day++) {                 
-            
-        var futureDate =   [ moment().add(day,'d').format('LLLL') ]
-         console.log(futureDate)           
-         // $(".future-date").html("<div>"  + futureDate + "</div>") //  futureDate._d if futureDate not formated      
-
-            }; 
-        // console.log(futureDate._d) test point if not formated  
-         
-    */ // --------------------- 5 day test section end ---------------------------
-
-     // -----------------  5 day forecast API -------------------------------------------------------------------------------------------------------------------------    
+     // -----------------  5 day forecast - secondary API -------------------------------------------------------------------------------------------------------------------------    
         var lat = weatherForecast.coord.lat;
         var lon = weatherForecast.coord.lon;
         var secondaryQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&exclude=hourly&appid=" + APIKey+ "&units=metric&dt&exclude=daily";
@@ -162,7 +150,7 @@ $("#search-button").on("click",function(event){
 
      // -----------------  5 day forecast API end ------------------------------------------------------------------------------------------------------------------------- 
 
-}); /* ------- main query brackets */
+}); /* ------- main query ends */
 
 
 });
@@ -178,7 +166,7 @@ $("#search-button").on("click",function(event){
                 
                 a.addClass("btn btn-info");
                 a.attr("data-city",cityNames[i]);
-                // a.attr('onclick','fetchWeather(event)')
+                // a.attr('onclick','function')
                 a.text(cityNames[i]);
                 $("#history").append(a) // adding buttons to search history
 
@@ -199,7 +187,7 @@ $("#search-button").on("click",function(event){
 
           
           
-        
+      
        
         
 
