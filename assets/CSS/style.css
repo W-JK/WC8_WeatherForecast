@@ -1,5 +1,7 @@
 
-
+:root{
+    font-size: 80%;
+}
 /* ------------- current weather tab -------------------- */
 .date{
     color: orangered;
@@ -39,7 +41,7 @@
 }
 
 .sub-container {
-    height: 20rem;      
+    /* height: 20rem;   */   
     border-color: black !important; 
     
     
@@ -52,5 +54,24 @@
 .btn-info{
     margin: 0.2rem !important;
 
+}
+
+
+/* ----------------- Media Query ------------ */ 
+
+
+@media screen and (max-width: 1024px) {
+ 
+    .container {
+       flex-direction: column !important; 
+   }
+
+
+    .card {
+    width: 100% !important;
+    min-width: auto;
+    margin: 5px !important;
+    padding: 5px;
+  } 
 }
 
